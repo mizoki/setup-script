@@ -1,8 +1,8 @@
 #!/bin/sh
 
 clone_hub_repository() {
-  mkdir -p $GIT_REPOS/github/github
-  cd $GIT_REPOS/github/github
+  mkdir -p $GIT_REPOS/github.com/github
+  cd $GIT_REPOS/github.com/github
   git clone https://github.com/github/hub.git
 }
 
