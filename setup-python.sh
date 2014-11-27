@@ -4,7 +4,7 @@ setup_python() {
   sudo aptitude install python-pip
 }
 
-# ref. https://bitbucket.org/mgemmill/bitbucket-cli
+# ref. https://bitbucket.org/zhemao/bitbucket-cli
 setup_bitbucket_cli() {
   sudo pip install bitbucket-cli
   echo '[auth]'              >  $HOME/.bitbucket
