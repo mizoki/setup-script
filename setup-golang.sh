@@ -2,13 +2,11 @@
 
 # ref. http://golang.org/doc/install
 setup_golang() {
-  VERSION=1.3.3
   GOOS=linux
   GOARCH=amd64
 
-  wget http://golang.org/dl/go${VERSION}.${GOOS}-${GOARCH}.tar.gz
-  tar xzf go${VERSION}.${GOOS}-${GOARCH}.tar.gz
-  mv go $HOME/.go
+  brew update
+  brew install go
   echo ''                              >> $HOME/.zshenv
   echo '# Go environment'              >> $HOME/.zshenv
   echo 'export GOROOT=$HOME/.go'       >> $HOME/.zshenv
@@ -18,7 +16,6 @@ setup_golang() {
   echo 'export GOPATH=$HOME/dev/go'    >> $HOME/.zshenv
   echo 'export PATH=$GOPATH/bin:$PATH' >> $HOME/.zshenv
   source $HOME/.zshenv
-  rm -f go${VERSION}.${GOOS}-${GOARCH}.tar.gz
 }
 
 setup_golang_mac() {
