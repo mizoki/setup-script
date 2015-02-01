@@ -7,14 +7,14 @@ setup_golang() {
 
   brew update
   brew install go
-  echo ''                              >> $HOME/.zshenv
-  echo '# Go environment'              >> $HOME/.zshenv
-  echo 'export GOROOT=$HOME/.go'       >> $HOME/.zshenv
-  echo "export GOOS=${GOOS}"           >> $HOME/.zshenv
-  echo "export GOARCH=${GOARCH}"       >> $HOME/.zshenv
-  echo 'export PATH=$PATH:$GOROOT/bin' >> $HOME/.zshenv
-  echo 'export GOPATH=$HOME/dev/go'    >> $HOME/.zshenv
-  echo 'export PATH=$GOPATH/bin:$PATH' >> $HOME/.zshenv
+  echo ''                                              >> $HOME/.zshenv
+  echo '# Go environment'                              >> $HOME/.zshenv
+  echo 'export GOROOT=$HOME/.linuxbrew/opt/go/libexec' >> $HOME/.zshenv
+  echo "export GOOS=${GOOS}"                           >> $HOME/.zshenv
+  echo "export GOARCH=${GOARCH}"                       >> $HOME/.zshenv
+  echo 'export PATH=$PATH:$GOROOT/bin'                 >> $HOME/.zshenv
+  echo 'export GOPATH=$HOME/dev/go'                    >> $HOME/.zshenv
+  echo 'export PATH=$GOPATH/bin:$PATH'                 >> $HOME/.zshenv
   source $HOME/.zshenv
 }
 
