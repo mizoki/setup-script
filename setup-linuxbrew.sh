@@ -35,7 +35,8 @@ init_linuxbrew_centos() {
 }
 
 setup_linuxbrew() {
-  ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"
+  # ref. http://brew.sh/linuxbrew/
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   # git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
 
   echo ''                                                      >> $HOME/.zshenv
